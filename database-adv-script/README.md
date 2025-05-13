@@ -19,6 +19,21 @@ A subquery was used to find all properties where the average rating is greater t
 ###  Correlated Subquery – Frequent Users
 A correlated subquery was used to identify users who have made more than 3 bookings. The subquery counts bookings per user and filters those exceeding the threshold, running once per user.
 
+## 🔢 Total Bookings Per User
+
+**Query:** Find the total number of bookings made by each user.
+
+**Concept:** Uses the `COUNT()` function and `GROUP BY` clause on the `Bookings` table, grouped by `user_id`.
+
+---
+
+## 🏆 Property Booking Rank – Window Function
+
+**Query:** Rank properties based on the total number of bookings they have received.
+
+**Concept:** Uses a window function such as `ROW_NUMBER()` or `RANK()` with `PARTITION BY` and `ORDER BY` to assign a rank to each property based on booking count.
+
+
 ## Notes
 All SQL queries were tested using MySQL and make use of standard SQL features such as:
 - `JOIN` types
