@@ -6,8 +6,10 @@ ON Users.user_id = Bookings.user_id;
 SELECT * 
 FROM airbnb_clone.Properties
 LEFT JOIN airbnb_clone.Reviews
-ON Properties.property_id = Reviews.property_id;
+ON Properties.property_id = Reviews.property_id
+ORDER BY Properties.name;
 
+-- FULL OUTER JOIN
 SELECT * 
 FROM airbnb_clone.Users
 LEFT JOIN airbnb_clone.Bookings
