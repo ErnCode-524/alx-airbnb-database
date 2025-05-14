@@ -23,4 +23,8 @@ EXPLAIN SELECT *
 FROM airbnb_clone.users
 WHERE user_id = 'BZ524';
 
+ANALYZE SELECT *
+FROM airbnb_clone.users
+WHERE user_id = 'BZ524';
+
 SHOW INDEX FROM properties;
