@@ -12,18 +12,20 @@ I reviewed queries and identified the following high-usage columns:
 #### � Step 2: Creating Indexes
 I added indexes using the `CREATE INDEX` statements below (saved in `database_index.sql`):
 
-```sql
+```
 CREATE INDEX idx_user_id ON Users(user_id);
 CREATE INDEX idx_booking_user_id ON Bookings(user_id);
 CREATE INDEX idx_booking_property_id ON Bookings(property_id);
 CREATE INDEX idx_property_id ON Properties(property_id);
+```
 ⚙️ Step 3: Measuring Query Performance with EXPLAIN
 Before creating indexes, a query like this:
 
 sql
-EXPLAIN SELECT * 
+```EXPLAIN SELECT * 
 FROM Users 
 JOIN Bookings ON Users.user_id = Bookings.user_id;
+```
 Returned:
 
 type: ALL
